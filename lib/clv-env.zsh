@@ -23,7 +23,7 @@ function clv-env () {
 
         *)
             echo "Usage: clv env (init|update)"
-            exit 1
+            return 1
         ;;
     esac
 

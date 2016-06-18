@@ -14,7 +14,7 @@ function clv-scm () {
             ;;
         *)
             echo "Usage: clv scm (type|update) [dir]"
-            exit 1
+            return 1
             ;;
     esac
 
