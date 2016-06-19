@@ -40,7 +40,7 @@ function clv-env-init () {
 
         # Store a reference to the environment's root, some of them require
         # this and it is useful to store for referencing directories later
-        local env_root="${HOME}/.${1}"
+        local env_root="${ENV_HOME}/${1}"
 
         # Some environments require this variable be set and it is useful
         # for referring to externally.
@@ -83,7 +83,7 @@ autoload clv-env-update
 #----------------------------------------------------------------------[ UTILS ]
 
 function clv-env-exists() {
-    if [[ -d $HOME/.$1 ]]; then
+    if [[ -d $ENV_HOME/$1 ]]; then
         return 0
     else
         return 1
