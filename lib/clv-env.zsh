@@ -63,7 +63,7 @@ autoload clv-env-init
 # Updates all environments and plugins
 function clv-env-update () {
     if clv-env-exists $1; then
-        local env_root="$HOME/.${1}"
+        local env_root="${ENV_HOME}/${1}"
 
         # Update the main environment
         echo "$fg_bold[green]>> $env_root$reset_color"
